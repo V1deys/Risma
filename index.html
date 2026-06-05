@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trending Viral Video</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+}
+
+/* HEADER */
+.header{
+    background:#111;
+    padding:12px;
+    text-align:center;
+    color:#00ff66;
+    font-weight:bold;
+    border-bottom:2px solid #00ff66;
+}
+
+/* CONTAINER */
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+/* VIDEO */
+.video-box{
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+.video-box img{
+    width:100%;
+    display:block;
+    border-radius:15px;
+}
+
+/* PLAY BUTTON */
+.play-btn{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    background:rgba(0,255,100,.8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:55px;
+    color:#fff;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:translate(-50%,-50%) scale(1);}
+    50%{transform:translate(-50%,-50%) scale(1.1);}
+    100%{transform:translate(-50%,-50%) scale(1);}
+}
+
+/* DURATION */
+.duration{
+    position:absolute;
+    bottom:12px;
+    right:12px;
+    background:rgba(0,0,0,.7);
+    padding:5px 10px;
+    border-radius:8px;
+    font-size:14px;
+}
+
+/* TITLE */
+.title{
+    text-align:center;
+    margin-top:20px;
+}
+
+.title h1{
+    font-size:38px;
+    color:#00ff66;
+}
+
+.title p{
+    margin-top:10px;
+    color:#ccc;
+}
+
+/* BUTTONS */
+.buttons{
+    margin-top:25px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.btn{
+    display:block;
+    text-align:center;
+    background:#00c853;
+    padding:18px;
+    border-radius:12px;
+    color:#fff;
+    text-decoration:none;
+    font-size:22px;
+    font-weight:bold;
+    transition:.3s;
+    box-shadow:0 0 15px rgba(0,255,100,.5);
+}
+
+.btn:hover{
+    background:#00e676;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-top:25px;
+}
+
+.gallery img{
+    width:100%;
+    height:130px;
+    object-fit:cover;
+    border-radius:10px;
+    border:2px solid #00ff66;
+    cursor:pointer;
+}
+
+/* INFO */
+.info{
+    margin-top:30px;
+    text-align:center;
+    color:#aaa;
+    font-size:14px;
+    padding-bottom:30px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.title h1{
+    font-size:28px;
+}
+
+.play-btn{
+    width:85px;
+    height:85px;
+    font-size:40px;
+}
+
+.gallery{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.btn{
+    font-size:18px;
+    padding:15px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+🔥 TRENDING VIRAL VIDEO • FREE STREAMING
+</div>
+
+<div class="container">
+
+<!-- VIDEO -->
+<div class="video-box" onclick="openSmartlink()">
+
+<img src="thumbnail.jpg" alt="thumbnail">
+
+<div class="play-btn">
+▶
+</div>
+
+<div class="duration">
+00:59
+</div>
+
+</div>
+
+<!-- TITLE -->
+<div class="title">
+<h1>MOST SEARCHED VIRAL VIDEO!</h1>
+<p>Click the button below to start watching</p>
+</div>
+
+<!-- BUTTONS -->
+<div class="buttons">
+
+<a href="#" class="btn" onclick="openSmartlink()">
+▶ WATCH NOW
+</a>
+
+<a href="#" class="btn" onclick="openSmartlink()">
+🔥 PLAY VIDEO
+</a>
+
+<a href="#" class="btn" onclick="openSmartlink()">
+⚡ CONTINUE WATCHING
+</a>
+
+<a href="#" class="btn" onclick="openSmartlink()">
+🎬 STREAM IN HD
+</a>
+
+</div>
+
+<!-- GALLERY -->
+<div class="gallery">
+
+<img src="foto1.jpg" onclick="openSmartlink()">
+<img src="foto2.jpg" onclick="openSmartlink()">
+<img src="foto3.jpg" onclick="openSmartlink()">
+<img src="foto4.jpg" onclick="openSmartlink()">
+
+</div>
+
+<!-- INFO -->
+<div class="info">
+✔ Unlimited streaming <br>
+✔ No registration required <br>
+✔ Daily video updates
+</div>
+
+</div>
+
+<!-- POPUNDER -->
+<script src="https://rungbeacon.com/91/98/b3/9198b3a681b43ac46d912c3ac535bb0f.js"></script>
+  
+
+<script>
+
+let clickCount = 0;
+
+function openSmartlink(){
+
+    clickCount++;
+
+    // SMARTLINK 1
+    if(clickCount % 2 == 1){
+
+        window.open(
+        "https://rungbeacon.com/f80k1uwed?key=b46cd7813bc9457a4731744b518d39b8",
+        "_blank"
+        );
+
+    }
+
+    // SMARTLINK 2
+    else{
+
+        window.open(
+        "https://rungbeacon.com/f80k1uwed?key=b46cd7813bc9457a4731744b518d39b8"
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+  </html>
